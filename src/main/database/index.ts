@@ -8,8 +8,8 @@ export { schema };
 
 export function getDbPath() {
   const basePath = app && app.isPackaged
-    ? path.join(process.resourcesPath, "db")
-    : path.join(process.cwd(), "db");
+    ? path.join(process.resourcesPath, "database")
+    : path.join(process.cwd(), "database");
 
   fs.mkdirSync(basePath, { recursive: true });
   return path.join(basePath, "prod.db");

@@ -5,7 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Invoices from './pages/Invoices';
 import Users from './pages/Users';
 
-export default function Router() {
+export default function App() {
 
   return (
     <InternetProvider>
