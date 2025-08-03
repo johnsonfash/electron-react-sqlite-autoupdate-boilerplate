@@ -1,0 +1,53 @@
+appId: com.yourcompany.electronapp
+productName: ElectronPOSApp
+
+files:
+  - dist/**
+  - package.json
+  - node_modules/**  #node_modules/better-sqlite3/**
+  - database/**
+
+asar: true
+asarUnpack:
+  - "node_modules/better-sqlite3/**"
+
+directories:
+  output: release
+
+forceCodeSigning: false
+
+mac:
+  target:
+    - dmg
+    - zip
+  identity: null 
+  sign: false
+  hardenedRuntime: true
+  entitlements: build/entitlements.mac.plist
+  icon: public/icon.png
+  category: public.app-category.productivity
+
+win:
+  target:
+    - nsis
+    - zip
+  icon: public/icon.png
+  artifactName: "${productName}-Setup-${version}.${ext}"
+
+linux:
+  target:
+    - AppImage
+  category: Utility
+  icon: public/icon.png
+
+publish:
+  provider: generic
+  url: "https://cdn.banzar.ng/"
+
+npmRebuild: false
+buildDependenciesFromSource: false
+compression: maximum
+
+extraResources:
+  - from: db/
+    to: db/

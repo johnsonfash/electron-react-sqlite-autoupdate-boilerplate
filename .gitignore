@@ -1,0 +1,20 @@
+# Node
+node_modules
+dist
+release
+*.log
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+
+# Environment
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# Build artifacts
+out
+*.asar
