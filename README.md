@@ -77,7 +77,7 @@ This will:
 * **Push schema & generate types:**
 
 ```bash
-npm run drizzle:generate && npm run drizzle:push
+npm run drizzle:push && npm run drizzle:generate
 ```
 
 * **Seed database:**

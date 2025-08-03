@@ -1,10 +1,10 @@
-appId: com.yourcompany.electronapp
-productName: ElectronPOSApp
+appId: com.tevance.ai-agent
+productName: AI Agent
 
 files:
   - dist/**
   - package.json
-  - node_modules/**  #node_modules/better-sqlite3/**
+  - node_modules/** #node_modules/better-sqlite3/**
   - database/**
 
 asar: true
@@ -20,7 +20,7 @@ mac:
   target:
     - dmg
     - zip
-  identity: null 
+  identity: null
   sign: false
   hardenedRuntime: true
   entitlements: build/entitlements.mac.plist
@@ -42,12 +42,12 @@ linux:
 
 publish:
   provider: generic
-  url: "https://cdn.banzar.ng/"
+  url: "https://cdn.tevance.com/"
 
 npmRebuild: false
 buildDependenciesFromSource: false
 compression: maximum
 
 extraResources:
-  - from: db/
-    to: db/
+  - from: datbase/
+    to: datbase/

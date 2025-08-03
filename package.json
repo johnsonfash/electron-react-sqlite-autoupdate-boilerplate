@@ -1,7 +1,7 @@
 {
-  "name": "electron-app-template",
+  "name": "ai-agent",
   "version": "0.0.1",
-  "description": "Electron + React + Drizzle + Auto-update + POS Printing",
+  "description": "AI Agent Desktop App",
   "main": "dist/main/index.js",
   "author": {
     "email": "fashanutosin7@gmail.com",
@@ -13,6 +13,8 @@
     "dev:renderer": "vite",
     "dev:electron": "wait-on dist/main/preload.js && electronmon dist/main/index.js",
     "dev": "rimraf dist && npm run build:main && concurrently -k \"npm run dev:main\" \"npm run dev:renderer\" \"npm run dev:electron\"",
+    "prisma": "npm run drizzle:generate && npm run drizzle:push",
+    "rebuild:sql": "npm rebuild better-sqlite3 --runtime=electron --target=37.2.4 --disturl=https://electronjs.org/headers && npm run postinstall && npx electron-builder install-app-deps",
     "drizzle:push": "electron ./node_modules/drizzle-kit/bin.cjs push",
     "drizzle:generate": "./node_modules/drizzle-kit/bin.cjs generate",
     "prebuild:db": "npm run drizzle:push && npm run drizzle:generate",
@@ -26,7 +28,7 @@
     "build:all": "npm run build && electron-builder -mwl",
     "build:dev": "npm run prebuild:db && tsc --project tsconfig.main.json && vite build --mode development",
     "start": "electron .",
-    "seed": "ts-node scripts/seed-db.ts",
+    "seed": "electron -r ts-node/register scripts/seed-db.js",
     "sync-update-feed": "ts-node scripts/sync-update-feed.ts",
     "bump-version": "ts-node scripts/bump-version.ts",
     "release": "npm run bump-version && npm run build:all && npm run sync-update-feed",
