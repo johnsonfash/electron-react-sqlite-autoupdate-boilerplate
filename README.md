@@ -4,7 +4,6 @@ A production-ready **Electron + React** boilerplate template with:
 
 * **Drizzle ORM** (better-sqlite3 for local storage)
 * **Auto-update support** (via electron-updater)
-* **POS printing capabilities**
 * **Hot-reload for development** (Electron, React, and TypeScript)
 * **TailwindCSS** for styling
 
@@ -15,7 +14,6 @@ A production-ready **Electron + React** boilerplate template with:
 * **Electron + React**: Combine powerful desktop capabilities with a React UI.
 * **Drizzle ORM**: Type-safe database operations with SQLite.
 * **Auto-update**: Built-in update management using `electron-updater`.
-* **POS Printing**: Ready to integrate receipt printing.
 * **Hot Module Replacement**: Faster development using Vite & electronmon.
 * **Multi-platform builds**: Windows, macOS, and Linux.
 * **TailwindCSS**: Utility-first styling for fast UI development.
@@ -72,12 +70,12 @@ This will:
 
 ---
 
-## Database (Drizzle ORM)
+## Database (Drizzle -> Prisma ORM)
 
 * **Push schema & generate types:**
 
 ```bash
-npm run drizzle:push && npm run drizzle:generate
+npm run prisma
 ```
 
 * **Seed database:**
@@ -144,17 +142,11 @@ This template integrates **electron-updater**. To enable:
 
 ---
 
-## POS Printing
-
-Use the Electron main process to send raw print commands to connected POS printers. Extend `src/main` to handle printing logic for receipts or labels.
-
----
-
 ## Technologies Used
 
 * **Electron**: Desktop application runtime
 * **React + Vite**: Modern frontend framework & tooling
-* **Drizzle ORM**: Database management
+* **Drizzle ORM**: Database management but converted to Prisma ORM chain
 * **TailwindCSS**: CSS utilities
 * **TypeScript**: Type safety for all layers
 
@@ -168,4 +160,4 @@ MIT License © [Tosin Fashanu](mailto:fashanutosin7@gmail.com)
 
 ## Author
 
-**Tosin Fashanu** – [GitHub](https://github.com/yourusername)
+**Tosin Fashanu** – [GitHub](https://github.com/johnsonfash)
