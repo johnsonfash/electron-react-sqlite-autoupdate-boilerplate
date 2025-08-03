@@ -83,6 +83,7 @@ npm run drizzle:push && npm run drizzle:generate
 * **Seed database:**
 
 ```bash
+npm run rebuild:sql
 npm run seed
 ```
 
