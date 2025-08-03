@@ -1,3 +1,7 @@
+# Electron React SQLite Auto-Update Boilerplate
+
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 # Electron + React Boilerplate
 
 A production-ready **Electron + React** boilerplate template with:
