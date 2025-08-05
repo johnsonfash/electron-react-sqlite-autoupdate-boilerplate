@@ -22,5 +22,8 @@ export default defineConfig(({ mode }) => ({
   server: {
     port: 5173,
     strictPort: true,
+    watch: {
+      ignored: ['**/database/**'], // <-- Ignore all files inside /database
+    },
   },
 }));
