@@ -116,9 +116,9 @@ seed()
   .then(() => {
     sqlite.close();
     console.log("Database connection closed.");
-    process.exit(1);
   })
   .catch((err) => {
     console.error("Error seeding:", err);
+  }).finally(()=> {
     process.exit(1);
-  });
+  })
